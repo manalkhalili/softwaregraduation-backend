@@ -52,4 +52,5 @@ public class UserService {
     public boolean checkIfEmailExists(String email) {
         return userRepo.existsByEmail(email);
     }
+
 }

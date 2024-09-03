@@ -1,4 +1,8 @@
 package com.soft.backend.repo;
 
-public interface UserProfileRepo {
+import com.soft.backend.entity.UserInfo;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserProfileRepo extends JpaRepository<UserInfo, Long> {
+    UserInfo findByEmail(String email);
 }
