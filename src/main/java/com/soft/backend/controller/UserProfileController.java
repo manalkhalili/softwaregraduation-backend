@@ -19,11 +19,13 @@ public class UserProfileController {
 
     @GetMapping("/email/{email}")
     public UserInfo getProfileByEmail(@PathVariable String email) {
+
         return profileService.findProfileByEmail(email);
     }
 
     @PutMapping("/update")
     public UserInfo updateProfile(@RequestBody UserInfo profile) {
+
         return profileService.updateProfile(profile);
     }
 
